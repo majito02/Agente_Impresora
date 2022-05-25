@@ -404,6 +404,308 @@ def mundo_impresora():
            #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
             print("Localización: CUARTO ya esta imprimiendo....")
             print("No hay esfuerzo. Costo Actual:" + str(costo))
+            #Condición cuando la segunda localización es SALA
+            if ingreso_localizacion_2 == 'SALA':
+                #Condición cuando el estado de la SALA es 1
+                if ingreso_estado_2 == '1':
+                    #Imprime un mensaje indicando que no esta imprimiendo
+                    print("Localización de  SALA no esta imprimiendo.........")   
+                    #Estableciendo el estado objetivo que es imprimir
+                    estado_objetivo['SALA'] = '0'
+                    costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                    #Mensaje que le indica al usuario que ya esta imprimiendo
+                    print("Imprimiendo archivo de SALA")
+                    #Mensaje que imprime el costo actual
+                    print("Costo actual: " + str(costo))
+                    #Condición del estado de impresión cuando es 1 en el DESPACHO
+                    if ingreso_estado_3 == '1':
+                        #Imprime un mensaje indicando que no esta imprimiendo
+                        print("Localización: DESPACHO no esta imprimiendo.........")
+                        #Estableciendo el estado objetivo que es imprimir
+                        estado_objetivo['DESPACHO'] = '0'
+                        costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                        #Mensaje que le indica al usuario que ya esta imprimiendo
+                        print("Imprimiendo archivo de DESPACHO")
+                        #Mensaje que imprime el costo actual
+                        print("Costo actual: " + str(costo))
+                    #Condición cuando el estado del DESPACHO es 0
+                    elif ingreso_estado_3 == '0':
+                        #Se establece el estado objetivo
+                        estado_objetivo['DESPACHO'] = '0'
+                       #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                        print("Localización de DESPACHO ya esta imprimiendo....")
+                        print("No hay esfuerzo. Costo Actual:" + str(costo))
+                #Condición cuando el estado de la SALA es 0
+                elif ingreso_estado_2 == '0':
+                    #Se establece el estado objetivo
+                    estado_objetivo['SALA'] = '0'
+                   #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                    print("Localización de SALA ya esta imprimiendo....")
+                    print("No hay esfuerzo. Costo Actual:" + str(costo))
+                    #Condición del estado de impresión cuando es 1 en el DESPACHO 
+                    if ingreso_estado_3 == '1':
+                        #Imprime un mensaje indicando que no esta imprimiendo
+                        print("Localización de  DESPACHO no esta imprimiendo.........")
+                        #Estableciendo el estado objetivo que es imprimir
+                        estado_objetivo['DESPACHO'] = '0'
+                        costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                        #Mensaje que le indica al usuario que ya esta imprimiendo
+                        print("Imprimiendo archivo de DESPACHO")
+                        #Mensaje que imprime el costo actual
+                        print("Costo actual: " + str(costo))
+                    #Condición cuando el estado es 0 en el DESPACHO
+                    elif ingreso_estado_3 == '0':
+                        #Se establece el estado objetivo
+                        estado_objetivo['DESPACHO'] = '0'
+                       #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                        print("Localización de DESPACHO ya esta imprimiendo....")
+                        print("No hay esfuerzo. Costo Actual:" + str(costo))
+            #Condición cuando la segunda localización es el DESPACHO
+            elif ingreso_localizacion_2 == 'DESPACHO':
+                #Condición cuando el estado del DESPACHO es 1
+                if ingreso_estado_2 == '1':
+                    #Imprime un mensaje indicando que no esta imprimiendo
+                    print("Localización de  DESPACHO no esta imprimiendo.........")
+                    #Estableciendo el estado objetivo que es imprimir
+                    estado_objetivo['DESPACHO'] = '0'
+                    costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                    #Mensaje que le indica al usuario que ya esta imprimiendo
+                    print("Imprimiendo archivo de DESPACHO")
+                    #Mensaje que imprime el costo actual
+                    print("Costo actual: " + str(costo)) 
+                    #Condición del estado de impresión cuando es 1 en la SALA
+                    if ingreso_estado_3 == '1':
+                        #Imprime un mensaje indicando que no esta imprimiendo
+                        print("Localización: SALA no esta imprimiendo.........")
+                        #Estableciendo el estado objetivo que es imprimir
+                        estado_objetivo['SALA'] = '0'
+                        costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                        #Mensaje que le indica al usuario que ya esta imprimiendo
+                        print("Imprimiendo archivo de SALA")
+                        #Mensaje que imprime el costo actual
+                        print("Costo actual: " + str(costo))
+                    #Condición cuando el estado de la SALA es 0
+                    elif ingreso_estado_3 == '0':
+                        #Se establece el estado objetivo
+                        estado_objetivo['SALA'] = '0'
+                       #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                        print("Localización de SALA ya esta imprimiendo....")
+                        print("No hay esfuerzo. Costo Actual:" + str(costo))
+                #Condición cuando el estado del DESPACHO es 0
+                elif ingreso_estado_2 == '0':
+                    #Se establece el estado objetivo
+                    estado_objetivo['DESPACHO'] = '0'
+                   #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                    print("Localización de DESPACHO ya esta imprimiendo....")
+                    print("No hay esfuerzo. Costo Actual:" + str(costo))
+                    #Condición cuando el estado de SALA es 1
+                    if ingreso_estado_3 == '1':
+                        #Imprime un mensaje indicando que no esta imprimiendo
+                        print("Localización de  SALA no esta imprimiendo.........")
+                        #Estableciendo el estado objetivo que es imprimir
+                        estado_objetivo['SALA'] = '0'
+                        costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                        #Mensaje que le indica al usuario que ya esta imprimiendo
+                        print("Imprimiendo archivo de SALA")
+                         #Mensaje que imprime el costo actual
+                        print("Costo actual: " + str(costo))
+                    #Condición cuando el estado de la SALA es 0
+                    elif ingreso_estado_3 == '0':
+                        #Se establece el estado objetivo
+                        estado_objetivo['SALA'] = '0'
+                       #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                        print("Localización de SALA ya esta imprimiendo....")
+                        print("No hay esfuerzo. Costo Actual:" + str(costo))
+    #Condición para verificar si la primera localización es el DESPACHO
+    elif ingreso_localizacion_1 == 'DESPACHO':
+        #Imprime un mensaje indicando la impresora va imprimir un archivo en el DESPACHO
+        print("Impresora con archivo en DESPACHO")
+        #Condición cuando el estado es 1 en el DESPACHO
+        if ingreso_estado_1 == '1':
+            #Imprime un mensaje indicando que no esta imprimiendo
+            print("Localización: DESPACHO no esta imprimiendo.........")
+            #Estableciendo el estado objetivo que es imprimir
+            estado_objetivo['DESPACHO'] = '0'
+            costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                    #Mensaje que le indica al usuario que ya esta imprimiendo
+            print("Imprimiendo archivo de DESPACHO")
+            #Mensaje que imprime el costo actual
+            print("Costo actual: " + str(costo))
+            #Condición cuando la segunda localización es SALA
+            if ingreso_localizacion_2 == 'SALA':
+                #Condición cuando el estado de la SALA es 1
+                if ingreso_estado_2 == '1':
+                    #Imprime un mensaje indicando que no esta imprimiendo
+                    print("Localización de  SALA no esta imprimiendo.........")
+                    #Estableciendo el estado objetivo que es imprimir
+                    estado_objetivo['SALA'] = '0'
+                    costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                    #Mensaje que le indica al usuario que ya esta imprimiendo
+                    print("Imprimiendo archivo de SALA")
+                    #Mensaje que imprime el costo actual
+                    print("Costo actual: " + str(costo))
+                    #Condición del estado de impresión cuando es 1 en el CUARTO
+                    if ingreso_estado_3 == '1':
+                        #Imprime un mensaje que indica que no esta imprimiendo
+                        print("Localización: CUARTO no esta imprimiendo.........")
+                        #Estableciendo el estado objetivo que es imprimir
+                        estado_objetivo['CUARTO'] = '0'
+                        costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                        #Mensaje que le indica al usuario que ya esta imprimiendo
+                        print("Imprimiendo archivo de CUARTO")
+                        #Mensaje que imprime el costo actual
+                        print("Costo actual: " + str(costo))
+                    #Condición cuando el estado de CUARTO es 0
+                    elif ingreso_estado_3 == '0':
+                        #Se establece el estado objetivo
+                        estado_objetivo['CUARTO'] = '0'
+                       #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                        print("Localización de CUARTO ya esta imprimiendo....")
+                        print("No hay esfuerzo. Costo Actual:" + str(costo))
+                #Condición cuando el estado de SALA es 0
+                elif ingreso_estado_2 == '0':
+                    #Se establece el estado objetivo
+                    estado_objetivo['SALA'] = '0'
+                   #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                    print("Localización de SALA ya esta imprimiendo....")
+                    print("No hay esfuerzo. Costo Actual:" + str(costo))
+                    #Condición cuando el estado es 1 en el CUARTO
+                    if ingreso_estado_3 == '1':
+                        #Imprime un mensaje indicando que no esta imprimiendo
+                        print("Localización de  CUARTO no esta imprimiendo.........")
+                        #Estableciendo el estado objetivo que es imprimir
+                        estado_objetivo['CUARTO'] = '0'
+                        costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                        #Mensaje que le indica al usuario que ya esta imprimiendo
+                        print("Imprimiendo archivo de CUARTO")
+                        #Mensaje que imprime el costo actual
+                        print("Costo actual: " + str(costo))
+                    #Condición cuando el estado es 0 en el CUARTO
+                    elif ingreso_estado_3 == '0':
+                        #Se establece el estado objetivo
+                        estado_objetivo['CUARTO'] = '0'
+                       #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                        print("Localización de CUARTO ya esta imprimiendo....")
+                        print("No hay esfuerzo. Costo Actual:" + str(costo))
+            #Condición cuando la segunda localización es el CUARTO
+            elif ingreso_localizacion_2 == 'CUARTO':
+                #Condición cuando el estado del CUARTO es 1
+                if ingreso_estado_2 == '1':
+                   #Imprime un mensaje que indica que no esta imprimiendo
+                    print("Localización de  CUARTO no esta imprimiendo.........")
+                    #Estableciendo el estado objetivo que es imprimir
+                    estado_objetivo['CUARTO'] = '0'
+                    costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                    #Mensaje que le indica al usuario que ya esta imprimiendo
+                    print("Imprimiendo archivo de CUARTO")
+                    #Mensaje que imprime el costo actual
+                    print("Costo actual: " + str(costo))
+                    #Condición cuando el estado de la SALA es 1
+                    if ingreso_estado_3 == '1':
+                        #Imprime un mensaje que indica que no esta imprimiendo
+                        print("Localización: SALA no esta imprimiendo.........")
+                        #Estableciendo el estado objetivo que es imprimir
+                        estado_objetivo['SALA'] = '0'
+                        costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                        #Mensaje que le indica al usuario que ya esta imprimiendo
+                        print("Imprimiendo archivo de SALA")
+                        #Mensaje que imprime el costo actual
+                        print("Costo actual: " + str(costo))
+                    #Condición cuando el estado de la SALA es 0
+                    elif ingreso_estado_3 == '0':
+                        #Se establece el estado objetivo
+                        estado_objetivo['SALA'] = '0'
+                       #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                        print("Localización de SALA ya esta imprimiendo....")
+                        print("No hay esfuerzo. Costo Actual:" + str(costo))
+                #Condición cuando el estado del CUARTO es 0
+                elif ingreso_estado_2 == '0':
+                    #Se establece el estado objetivo
+                    estado_objetivo['CUARTO'] = '0'
+                   #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                    print("Localización de CUARTO ya esta imprimiendo....")
+                    print("No hay esfuerzo. Costo Actual:" + str(costo))
+                    #Condición cuando el estado de la SALA es 1
+                    if ingreso_estado_3 == '1':
+                        #Imprime un mensaje indicando que no esta imprimiendo
+                        print("Localización de  SALA no esta imprimiendo.........")    
+                        #Estableciendo el estado objetivo que es imprimir
+                        estado_objetivo['SALA'] = '0'
+                        costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                        #Mensaje que le indica al usuario que ya esta imprimiendo
+                        print("Imprimiendo archivo de SALA")
+                        #Mensaje que imprime el costo actual
+                        print("Costo actual: " + str(costo))
+                    #Condición cuando el estado de la SALA es 0
+                    elif ingreso_estado_3 == '0':
+                        #Se establece el estado objetivo
+                        estado_objetivo['SALA'] = '0'
+                       #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                        print("Localización de SALA ya esta imprimiendo....")
+                        print("No hay esfuerzo. Costo Actual:" + str(costo))
+        #Condición cuando el estado del DESPACHO es 0
+        elif ingreso_estado_1 == '0':
+            #Se establece el estado objetivo
+            estado_objetivo['DESPACHO'] = '0'
+           #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+            print("Localización: DESPACHO ya esta imprimiendo....")
+            print("No hay esfuerzo. Costo Actual:" + str(costo))
+            #Condición cuando la segunda localización es SALA
+            if ingreso_localizacion_2 == 'SALA':
+                #Condición cuando el estado de la SALA es 1
+                if ingreso_estado_2 == '1':
+                    #Imprime un mensaje indicando que no esta imprimiendo
+                    print("Localización de  SALA no esta imprimiendo.........")
+                    #Estableciendo el estado objetivo que es imprimir
+                    estado_objetivo['SALA'] = '0'
+                    costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                    #Mensaje que le indica al usuario que ya esta imprimiendo
+                    print("Imprimiendo archivo de SALA")
+                    #Mensaje que imprime el costo actual
+                    print("Costo actual: " + str(costo))
+                    #Condición cuando el estado es 1 en el CUARTO
+                    if ingreso_estado_3 == '1':
+                        #Imprime un mensaje indicando que no esta imprimiendo
+                        print("Localización: CUARTO no esta imprimiendo.........")
+                        #Estableciendo el estado objetivo que es imprimir
+                        estado_objetivo['CUARTO'] = '0'
+                        costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                        #Mensaje que le indica al usuario que ya esta imprimiendo
+                        print("Imprimiendo archivo de CUARTO")
+                        #Mensaje que imprime el costo actual
+                        print("Costo actual: " + str(costo))
+                    #Condición cuando el estado es 0 en CUARTO
+                    elif ingreso_estado_3 == '0':
+                        #Se establece el estado objetivo
+                        estado_objetivo['CUARTO'] = '0'
+                       #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                        print("Localización de CUARTO ya esta imprimiendo....")
+                        print("No hay esfuerzo. Costo Actual:" + str(costo))
+                #Condición cuando el estado de SALA es 0
+                elif ingreso_estado_2 == '0':
+                    #Se establece el estado objetivo
+                    estado_objetivo['SALA'] = '0'
+                   #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                    print("Localización de SALA ya esta imprimiendo....")
+                    print("No hay esfuerzo. Costo Actual:" + str(costo)) 
+                    #Condición cuando el estado es 1 en el CUARTO
+                    if ingreso_estado_3 == '1':
+                        #Imprime un mensaje que indica que no esta imprimiendo
+                        print("Localización de  CUARTO no esta imprimiendo.........")
+                        #Estableciendo el estado objetivo que es imprimir
+                        estado_objetivo['CUARTO'] = '0'
+                        costo += 1 #Incrementar un costo, ya que no estaba imprimiendo y hará el esfuerzo por imprimir
+                        #Mensaje que le indica al usuario que ya esta imprimiendo
+                        print("Imprimiendo archivo de CUARTO")
+                        #Mensaje que imprime el costo actual
+                        print("Costo actual: " + str(costo))
+                    #Condición cuando el estado de CUARTO es 0
+                    elif ingreso_estado_3 == '0':
+                        #Se establece el estado objetivo
+                        estado_objetivo['CUARTO'] = '0'
+                       #Se imprime un mensaje que indique que ya está imprimiendo,  y que no existe esfuerzo, mostrando el costo actual
+                        print("Localización de DESPACHO ya esta imprimiendo....")
+                        print("No hay esfuerzo. Costo Actual:" + str(costo))
            
     #Impresiones finales con el estado objetivo que es 0 que significa que imprime y la medición de rendimiento de acuerdo al costo
     print("ESTADO OBJETIVO: ")
